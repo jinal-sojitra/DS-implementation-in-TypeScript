@@ -1,10 +1,13 @@
 "use strict";
-class ListNode {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SinglyListNode = void 0;
+class SinglyListNode {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
+exports.SinglyListNode = SinglyListNode;
 class LinkedList {
     constructor() {
         this.head = null;
@@ -20,12 +23,12 @@ class LinkedList {
         return count;
     }
     insertAtBegin(data) {
-        const newNode = new ListNode(data);
+        const newNode = new SinglyListNode(data);
         newNode.next = this.head;
         this.head = newNode;
     }
     insertAtEnd(data) {
-        const newNode = new ListNode(data);
+        const newNode = new SinglyListNode(data);
         //if list empty then make this node the head node
         if (!this.head) {
             this.head = newNode;
@@ -48,7 +51,7 @@ class LinkedList {
             this.insertAtBegin(data);
         }
         else {
-            const newNode = new ListNode(data);
+            const newNode = new SinglyListNode(data);
             //go till index less than 1 -> newNode point to which current are pointing
             //-> point current to newNode
             let currentNode = this.head;

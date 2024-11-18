@@ -1,6 +1,6 @@
-class ListNode<T> {
+export class SinglyListNode<T> {
   data: T;
-  next: ListNode<T> | null;
+  next: SinglyListNode<T> | null;
 
   constructor(data: T) {
     this.data = data;
@@ -9,7 +9,7 @@ class ListNode<T> {
 }
 
 class LinkedList<T> {
-  head: ListNode<T> | null;
+  head: SinglyListNode<T> | null;
 
   constructor() {
     this.head = null;
@@ -28,13 +28,13 @@ class LinkedList<T> {
   }
 
   insertAtBegin(data: T): void {
-    const newNode = new ListNode(data);
+    const newNode = new SinglyListNode(data);
     newNode.next = this.head;
     this.head = newNode;
   }
 
   insertAtEnd(data: T): void {
-    const newNode = new ListNode(data);
+    const newNode = new SinglyListNode(data);
 
     //if list empty then make this node the head node
     if (!this.head) {
@@ -59,7 +59,7 @@ class LinkedList<T> {
     if (index === 0) {
       this.insertAtBegin(data);
     } else {
-      const newNode = new ListNode(data);
+      const newNode = new SinglyListNode(data);
 
       //go till index less than 1 -> newNode point to which current are pointing
       //-> point current to newNode
