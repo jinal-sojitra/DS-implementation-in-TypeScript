@@ -105,5 +105,5 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  },"include": ["linked-list.js", "linked-list.ts"]
+  },"include": ["linked-list.js", "linked-list.ts","doubly-linked-list.ts","doubly-linked-list.js"]
 }
